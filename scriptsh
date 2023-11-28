@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir rep
+
+mkdir rep/devops
+touch rep/devops/file1.txt
+touch rep/devops/file2.txt
+mkdir essai
+
+cp devops/file1.txt essai
+ls -l devops
+sudo useradd -p password -md /home/administrateur admin   

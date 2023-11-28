@@ -1,0 +1,10 @@
+#!bin/bash
+
+
+sudo useradd -p password user1 
+
+echo "hello devops" > fileuser
+
+chmod a+r fileuser
+
+cat fileuser 2> fileerreur
