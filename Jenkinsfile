@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment { 
+      dockerhub = credentials('dockerhub')
+      }
 
     stages {
         stage('Build') {
@@ -9,7 +12,7 @@ pipeline {
         }
         stage('Login') {
             steps {
-               sh 'docker login -u hadhemidhifaoui -p passwordh'
+               sh 'echo $dockerhub_psw | docker login -u $dockerhub_usr --password-stdin'
             }
         }
         stage('Tag') {
