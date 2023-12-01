@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Login') {
             steps {
-               sh 'echo $dockerhub_psw | docker login -u $dockerhub_usr --password-stdin'
+               sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
             }
         }
         stage('Tag') {
