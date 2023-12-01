@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 docker build -t hadhemi .
-           
             }
         }
         stage('Login') {
@@ -23,5 +22,4 @@ pipeline {
                 docker push hadhemidhifaoui/hadhemi
             }
         }
-    }
-}
+    }}
